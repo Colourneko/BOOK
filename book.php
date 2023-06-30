@@ -250,5 +250,19 @@ _END;
 
   echo "</body></html>";
 ?>
+<?php
+class newRecord{
+  public string $username;
+  public string $email;
+  public function __construct(string $username, string $email){
+    $this->username = $username;
+    $this->email = $email;
+  }
+}
+//with php 8
+class Record{
+  public function __construct(public string $username, public string $email){}
+}
+?>
   </body>
 </html>
